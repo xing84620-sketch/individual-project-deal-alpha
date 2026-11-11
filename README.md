@@ -27,13 +27,34 @@
 
 ## 当前状态与运行方式
 
-当前仓库为项目初始化版本，仅包含项目说明与 Git 忽略规则，暂无可运行程序，无需安装依赖。
+当前已加入课程部署实验的复利计算器，支持调整投资年限和年化收益率。并购分析功能仍在规划中。
 
-后续加入分析代码和应用时，将同步提供 `requirements.txt`、数据准备步骤及运行命令。以上功能均为计划，尚未在本仓库实现。
+在 Mac 终端进入项目目录后运行：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+streamlit run app.py
+```
+
+Streamlit Community Cloud 部署使用仓库 `xing84620-sketch/individual-project-deal-alpha`、分支 `main`，入口文件为 `app.py`。本实验无需密钥或外部数据。
 
 ## 仓库文件
 
 - `README.md`：项目介绍、进度和使用说明。
 - `.gitignore`：排除密钥、虚拟环境及缓存。
+- `app.py`：交互式复利计算器。
+- `requirements.txt`：应用运行依赖。
 
 后续按数据获取、事件研究、预测评估、可视化应用的顺序逐步补充代码。本项目用于课程研究，输出不作为买卖建议。
+
+## 云端部署
+
+应用地址：https://xing84620-deal-alpha.streamlit.app
+
+部署仓库为 `xing84620-sketch/individual-project-deal-alpha`，分支为 `main`，入口为 `app.py`。依赖已从项目虚拟环境导出并锁定版本。
+
+更新应用后运行 `git add app.py requirements.txt README.md`、`git commit -m "更新应用"` 和 `git push origin main`，Streamlit Cloud 会自动更新。
+
+课程验收仍需本人使用手机流量访问应用，并将应用网址发送到课程群。
