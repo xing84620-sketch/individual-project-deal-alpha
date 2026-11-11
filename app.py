@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("我的第一个云端应用")
+st.title("我的第一个云端应用 v2")
 st.write("这是我在数据分析课上部署的第一个 Streamlit 应用。")
 
 years = st.slider("投资年限（年）", 1, 30, 10)
